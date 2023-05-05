@@ -1,11 +1,8 @@
-#include <stdio.h>
-
-/*(nur printf) - Instructions für das Nutzen des KeyValStore:*/
-/*TextFKVS - Text For Key-Value-Store*/
-void TextFKVS() {
-    printf("\n~| folgende Möglichkeiten für die Nutzung des KeyValueStore:\n");
-    printf("~| Eingabe 'SHOW'\t - zeigt alle aktuellen Daten als Tabelle\n");
-    printf("~| Eingabe 'PUT'\t - einem Key wird ein value zugewiesen\n");
-    printf("~| Eingabe 'GET'\t - gibt den Value eines bestimmten Keys zurück\n");
-    printf("~| Eingabe 'DEL'\t - zeigt alle aktuellen Daten als Tabelle\n");
+#include "sub.h" // Einbinden der Header-Datei sub.h
+#include "KeyValStore.h" // Einbinden der Header-Datei KeyValStore.h
+void strip_newline(char* str) { // Definition der Funktion strip_newline mit Übergabeparameter char-Pointer str
+    char* pos = strchr(str, '\n'); // Initialisierung eines char-Pointers pos mit dem Rückgabewert von strchr(), welches die Position des ersten Vorkommens von '\n' in str zurückgibt oder NULL, wenn '\n' nicht gefunden wurde
+    if (pos != NULL) { // Wenn pos ungleich NULL ist, d.h. '\n' in str gefunden wurde
+        *pos = '\0'; // Setze den Wert an pos auf '0', um das Zeilenende zu entfernen
+    }
 }
